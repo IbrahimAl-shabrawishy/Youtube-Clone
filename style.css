@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+
+}
+
+/* header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding-inline: 16px;
+
+    .left-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .youtube-brand {
+            display: flex;
+            align-items: center;
+            gap: 1px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 600;
+
+            sup {
+                font-size: 12px;
+                font-weight: 500;
+                color: #c6c6c6;
+
+            }
+
+
+        }
+
+
+        cursor: pointer;
+
+        i {
+            font-size: 25px;
+
+        }
+
+        .youtube {
+            color: red;
+        }
+
+
+    }
+
+    .mid-section {
+        display: flex;
+        align-items: center;
+
+        form {
+            display: flex;
+            height: 40px;
+            width: 628px;
+
+            input {
+                width: 100%;
+                border-radius: 2px 0 0 2px;
+                padding: 12px;
+                font-size: 1.6rem;
+                border: 1px solid #d3d3d3;
+                border-right: none;
+            }
+
+            button {
+                width: 64px;
+                border: 1px solid #d3d3d3;
+                border-radius: 0 2px 2px 0;
+                padding-top: 4px;
+                background-color: #f8f8f8;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            button:hover {
+                border-color: #c6c6c6;
+                background-color: #f0f0f0;
+            }
+
+
+
+
+        }
+
+        .fa-microphone {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f9f9f9;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            cursor: pointer;
+
+        }
+
+
+
+
+
+    }
+
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+}
+
+/* content area */
+
+.content-area {
+
+    height: calc(100vh - 56px);
+    display: flex;
+    background-color: #f9f9f9;
+
+    aside {
+        height: 100%;
+        width: 280px;
+        background-color: white;
+        overflow-y: auto;
+
+        nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0;
+            padding-right: 15px;
+
+            hr {
+                height: 1px;
+                background-color: #efefef;
+                border: none;
+                margin: 10px 0;
+
+            }
+
+            .nav-link {
+                display: flex;
+                align-items: center;
+                padding: 10px 16px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.05);
+                }
+
+                span {
+                    margin-left: 24px;
+                    font-size: 1.4rem;
+                    line-height: 2em;
+                    font-weight: 400;
+                    color: #030303;
+                }
+
+                &.active {
+                    background-color: #efefef;
+                }
+
+                #active-span {
+                    font-weight: 500;
+
+                }
+
+            }
+
+            p {
+                font-size: 1.4rem;
+                color: #606060;
+                font-weight: 500;
+                padding: 8px 16px;
+                text-transform: uppercase;
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+}
+
+/* main */
+
+main {
+    width: calc(100% - 280px);
+    height: 100%;
+    padding: 35px 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: auto;
+
+
+    .videos-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+
+
+
+        .video {
+
+            margin-bottom: 40px;
+            cursor: pointer;
+            width: calc(25% - 10px);
+
+            .thumbnail {
+
+
+                margin-bottom: 12px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .video-details {
+                display: flex;
+
+                .creator-image {
+                    img {
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        margin-right: 12px;
+                    }
+                }
+            }
+
+            .title {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+                }
+
+                .video-title {
+                    color: rgb(3, 3, 3);
+                    font-size: 1.6rem;
+                    max-width: 278px;
+                    font-weight: 500;
+                    line-height: 2.2rem;
+                    margin-bottom: 4px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+/* Responsive media */
+@media (max-width:1050px) {
+
+    header {
+        .mid-section {
+
+            form {
+                width: 300px;
+
+            }
+
+
+
+
+        }
+
+        .right-section {
+            gap: 10px;
+
+        }
+
+
+
+    }
+
+    .content-area {
+
+
+
+        aside {
+
+            display: none;
+
+        }
+
+
+
+
+
+    }
+
+
+    main {
+        
+        width: 100%;
+
+        .videos-container {
+
+
+
+
+            .video {
+
+                width: calc(50% - 10px);
+            }
+
+        }
+
+    }
+}
+
+
+@media(max-width:850px) {
+    main {
+        background-color: #606060;
+        width: 100%;
+
+        .videos-container {
+            justify-content: center;
+
+
+
+
+
+            .video {
+
+                width: 100%;
+            }
+
+        }
+
+    }
+
+
+
+
+
+}
